@@ -4,7 +4,7 @@ import os
 from sql import insert
 
 
-def main():
+def microReceiveChan():
     connection = pika.BlockingConnection(pika.ConnectionParameters
                                          (host='localhost'))
     channel = connection.channel()
@@ -42,7 +42,7 @@ def main():
 
 if __name__ == '__main__':
     try:
-        main()
+        microReceiveChan()
     except KeyboardInterrupt:
         print('Interrupted')
         try:

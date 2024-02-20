@@ -3,7 +3,7 @@ import sys
 import os
 
 
-def main():
+def partnerReceiveChan():
     connection = pika.BlockingConnection(pika.ConnectionParameters
                                          (host='localhost'))
     channel = connection.channel()
@@ -22,7 +22,7 @@ def main():
 
 if __name__ == '__main__':
     try:
-        main()
+        partnerReceiveChan()
     except KeyboardInterrupt:
         print('Interrupted')
         try:
